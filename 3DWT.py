@@ -345,7 +345,7 @@ def save_subband_video(subband, subband_name, plane,name):
     subband = subband.astype(np.uint8)
     frame_rate = 30
     # Create a video writer for this subband
-    output_path = os.path.join('subband_videos', f"{name}_subband_{subband_name}_{plane}.mp4")
+    output_path = os.path.join(f'subband_videos/{name}', f"{name}_subband_{subband_name}_{plane}.mp4")
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     [frame_count,frame_height,frame_width] = subband.shape
 
